@@ -17,14 +17,14 @@ class Wisata extends Model
         'geometry'
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
+    // protected static function boot()
+    // {
+    //     parent::boot();
 
-        static::creating(function ($post) {
-            $post->{$post->getKeyName()} = (string) Str::uuid();
-        });
-    }
+    //     static::creating(function ($post) {
+    //         $post->{$post->getKeyName()} = (string) Str::uuid();
+    //     });
+    // }
 
     
 }

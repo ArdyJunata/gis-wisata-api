@@ -14,7 +14,7 @@ class CreateWisatasTable extends Migration
     public function up()
     {
         Schema::create('wisatas', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->bigIncrements('id');
             $table->string('nama_wisata');
             $table->string('alamat');
             $table->string('kabupaten');

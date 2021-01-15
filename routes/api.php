@@ -25,5 +25,7 @@ Route::prefix('wisata')->group(function () {
     Route::get('/', [$controller, 'index'] );
     Route::get('/{id}', [$controller, 'show'] );
     Route::post('/', [$controller, 'create'] );
+    Route::put('/{id}', [$controller, 'update'] );
+    Route::delete('/{id}', [$controller, 'delete'] );
 });
 
