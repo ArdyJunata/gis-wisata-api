@@ -51,7 +51,7 @@ class WisataController extends Controller
 
         // dd($validate);
 
-        return response()->json(["message" => "data added.", "data" => $data]);
+        return response()->json(["message" => "data added.", "data" => $data,'status_code' => 201]);
 
     }
 
@@ -77,7 +77,7 @@ class WisataController extends Controller
 
         // dd($validate);
 
-        return response()->json(["message" => "data updated.", "data" => $data]);
+        return response()->json(["message" => "data updated.", "data" => $data, 'status_code' => 201]);
 
     }
 
@@ -88,8 +88,8 @@ class WisataController extends Controller
         {
             $data->delete();
         } else {
-            return response()->json(['message' => 'data no found.' ]);
+            return response()->json(['message' => 'data no found.', 'status_code' => 400 ]);
         }
-        return response()->json(['message' => 'delete success.' ]);
+        return response()->json(['message' => 'delete success.', 'status_code' => 201]);
     }
 }
